@@ -55,6 +55,17 @@ async def start(bot, update):
     await bot.send_message(
         chat_id=update.chat.id,
         text=Translation.START_TEXT,
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton('Source 😒', url='https://github.com/JyothisJayanth/M3U8-Converter'),
+                    InlineKeyboardButton('Project Channel', url='https://t.me/WhySooSerious')
+                ],
+                [
+                    InlineKeyboardButton('My Creator', url='https://t.me/EverythingSuckz')
+                ]
+            ]
+        ),
         reply_to_message_id=update.message_id
     )
 
