@@ -3,7 +3,9 @@ from translation import Translation
 
 from pyrogram import (
     Client,
-    Filters
+    Filters,
+    InlineKeyboardMarkup,
+    InlineKeyboardButton
 )
 
 logging.basicConfig(
