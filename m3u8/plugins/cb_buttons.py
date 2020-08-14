@@ -3,9 +3,9 @@ from pyrogram import (
     Client,
     CallbackQuery
 )
-from anydlbot import AUTH_USERS
-from anydlbot.plugins.youtube_dl_button import youtube_dl_call_back
-from anydlbot.plugins.dl_button import ddl_call_back
+from m3u8 import AUTH_USERS
+from m3u8.plugins.youtube_dl_button import youtube_dl_call_back
+from m3u8.plugins.dl_button import ddl_call_back
 
 
 logging.basicConfig(

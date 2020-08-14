@@ -1,7 +1,7 @@
 import math
 import time
 
-from anydlbot import (
+from m3u8 import (
     FINISHED_PROGRESS_STR,
     UN_FINISHED_PROGRESS_STR
 )

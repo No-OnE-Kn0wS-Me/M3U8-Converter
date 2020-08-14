@@ -4,7 +4,7 @@ from pyrogram import (
     Client,
     Filters
 )
-from anydlbot import (
+from m3u8 import (
     AUTH_USERS,
     DOWNLOAD_LOCATION
 )

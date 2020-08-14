@@ -1,7 +1,7 @@
 import os
 import requests
 import time
-from anydlbot.helper_funcs.display_progress import (
+from m3u8.helper_funcs.display_progress import (
     humanbytes
 )
 

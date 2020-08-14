@@ -1,7 +1,7 @@
 import logging
 import os
 from pyrogram import Client
-from anydlbot import (
+from m3u8 import (
     APP_ID,
     API_HASH,
     DOWNLOAD_LOCATION,
@@ -22,10 +22,10 @@ if __name__ == "__main__":
     if not os.path.isdir(DOWNLOAD_LOCATION):
         os.makedirs(DOWNLOAD_LOCATION)
     plugins = dict(
-        root="anydlbot/plugins"
+        root="m3u8/plugins"
     )
     app = Client(
-        "AnyDLBot",
+        "m3u8",
         bot_token=TG_BOT_TOKEN,
         api_id=APP_ID,
         api_hash=API_HASH,

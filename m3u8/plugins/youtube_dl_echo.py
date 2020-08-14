@@ -7,16 +7,16 @@ from pyrogram import (
     InlineKeyboardMarkup,
     Message
 )
-from anydlbot import (
+from m3u8 import (
     AUTH_USERS,
     HTTP_PROXY,
     DOWNLOAD_LOCATION,
     DEF_THUMB_NAIL_VID_S
 )
-from anydlbot.helper_funcs.display_progress import humanbytes
-from anydlbot.helper_funcs.help_uploadbot import DownLoadFile
-from anydlbot.helper_funcs.extract_link import get_link
-from anydlbot.helper_funcs.run_cmnd import run_shell_command
+from m3u8.helper_funcs.display_progress import humanbytes
+from m3u8.helper_funcs.help_uploadbot import DownLoadFile
+from m3u8.helper_funcs.extract_link import get_link
+from m3u8.helper_funcs.run_cmnd import run_shell_command
 # the Strings used for this "thing"
 from translation import Translation
 

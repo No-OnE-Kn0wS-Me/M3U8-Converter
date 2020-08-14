@@ -2,7 +2,7 @@ import os
 import time
 from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
-from anydlbot.helper_funcs.run_cmnd import run_shell_command
+from m3u8.helper_funcs.run_cmnd import run_shell_command
 
 
 async def take_screen_shot(video_file, output_directory, ttl):

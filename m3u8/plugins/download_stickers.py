@@ -6,11 +6,11 @@ from pyrogram import (
     Client,
     Filters
 )
-from anydlbot import (
+from m3u8 import (
     AUTH_USERS,
     DOWNLOAD_LOCATION
 )
-from anydlbot.helper_funcs.display_progress import progress_for_pyrogram
+from m3u8.helper_funcs.display_progress import progress_for_pyrogram
 # the Strings used for this "thing"
 from translation import Translation
 

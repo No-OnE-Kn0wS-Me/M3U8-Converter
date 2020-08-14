@@ -2,9 +2,9 @@ import os
 
 # the secret configuration specific things
 if bool(os.environ.get("ENV", False)):
-    from anydlbot.sample_config import Config
+    from m3u8.sample_config import Config
 else:
-    from anydlbot.config import Config
+    from m3u8.config import Config
 
 
 # TODO: is there a better way?
