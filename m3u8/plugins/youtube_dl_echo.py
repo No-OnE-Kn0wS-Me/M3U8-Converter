@@ -31,9 +31,6 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 @Client.on_message(Filters.regex(pattern=".*http.*"))
 async def echo(bot, update: Message):
-    if update.from_user.id not in AUTH_USERS:
-        await update.delete()
-        return
     # LOGGER.info(update)
     # await bot.send_chat_action(
     #     chat_id=update.chat.id,
@@ -126,13 +123,13 @@ async def echo(bot, update: Message):
                     # special weird case :\
                     ikeyboard = [
                         InlineKeyboardButton(
-                            "SVideo [" +
+                            "Download as Video [" +
                             "] ( " +
                             approx_file_size + " )",
                             callback_data=(cb_string_video).encode("UTF-8")
                         ),
                         InlineKeyboardButton(
-                            "DFile [" +
+                            "Download as File [" +
                             "] ( " +
                             approx_file_size + " )",
                             callback_data=(cb_string_file).encode("UTF-8")
@@ -182,11 +179,11 @@ async def echo(bot, update: Message):
                 "video", format_id, format_ext)
             inline_keyboard.append([
                 InlineKeyboardButton(
-                    "video",
+                    "Video",
                     callback_data=(cb_string_video).encode("UTF-8")
                 ),
                 InlineKeyboardButton(
-                    "file",
+                    "File",
                     callback_data=(cb_string_file).encode("UTF-8")
                 )
             ])
@@ -226,11 +223,11 @@ async def echo(bot, update: Message):
             "video", "OFL", "ENON")
         inline_keyboard.append([
             InlineKeyboardButton(
-                "SVideo",
+                "Download as Video",
                 callback_data=(cb_string_video).encode("UTF-8")
             ),
             InlineKeyboardButton(
-                "DFile",
+                "Download as File",
                 callback_data=(cb_string_file).encode("UTF-8")
             )
         ])
