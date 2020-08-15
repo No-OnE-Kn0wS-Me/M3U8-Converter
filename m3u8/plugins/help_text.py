@@ -60,11 +60,11 @@ async def start(bot, update):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton('Source 😒', url='https://github.com/JyothisJayanth/M3U8-Converter'),
-                    InlineKeyboardButton('Project Channel', url='https://t.me/WhySooSerious')
+                    InlineKeyboardButton('Source 😒', url='https://t.me/WhySooSerious/7'),
+                    InlineKeyboardButton('Other BOTs', url='https://t.me/WhySooSerious/6')
                 ],
                 [
-                    InlineKeyboardButton('My Creator', url='https://t.me/EverythingSuckz')
+                    InlineKeyboardButton('My Creator', url='https://t.me/WhySooSerious')
                 ]
             ]
         ),
