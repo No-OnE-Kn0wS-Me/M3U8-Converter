@@ -28,7 +28,7 @@ URL | filename | username | password"""
 Telegram ID: <code>{}</code>
 Plan name: <a href='https://t.me/SpEcHlDe/599'>{}</a>
 Expires on: {}"""
-    HELP_USER = "Hey there,\n Send Me any valid M3U8 [HLV] link and I will Convert it into MP4 and Sends the Telegram File\n\nIf you want to set Custom Thumbnail, Send me any photo.\nYou can use /deletethumbnail to delete the Previous or auto-generated thumbnail.\n Hit\me to Check for any Restrictions.\n\nAnd as a Bonus, Screenshots will be automatically Generated 🎉"
+    HELP_USER = "Hey there,\n\nSend Me any valid M3U8 [HLV] link and I will Convert it into MP4 and Sends the Telegram File.\n\nIf you want to set Custom Thumbnail,\nSend me any photo.\n\nYou can use /deletethumbnail to delete the Previous or auto-generated thumbnail.\n\nHit \checkme to Check for any Restrictions.\n\nAnd as a Bonus, Screenshots will be automatically Generated 🎉"
     REPLY_TO_DOC_GET_LINK = "Reply to a Telegram media to get High Speed Direct Download Link"
     REPLY_TO_DOC_FOR_C2V = "Reply to a Telegram media to convert"
     REPLY_TO_DOC_FOR_SCSS = "Reply to a Telegram media to get screenshots"
