@@ -35,6 +35,7 @@ async def help_user(bot, update):
 
 @Client.on_message(Filters.command(["me"]))
 async def get_me_info(bot, update):
+    chat_id = str(update.from_user.id)
     if update.from_user.id in BLACKLIST_USERS:
         await bot.send_message(
             chat_id=update.chat.id,
@@ -43,8 +44,8 @@ async def get_me_info(bot, update):
             reply_to_message_id=update.message_id,
             disable_web_page_preview=True
         )
-        return
-    chat_id = str(update.from_user.id)
+    
+    else:
         await bot.send_message(
             chat_id=update.chat.id,
             text="**You don't have any Restrictions Applied to your Account**\n Telegram ID : `{}`\n\n__If you Enjoyed this BOT, Kindly Donate__"
