@@ -50,4 +50,4 @@ async def delete_thumbnail(bot, update):
         chat_id=update.chat.id,
         text=Translation.DEL_ETED_CUSTOM_THUMB_NAIL,
         reply_to_message_id=update.message_id
-        )
+    )
