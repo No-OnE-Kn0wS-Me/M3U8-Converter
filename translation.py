@@ -72,4 +72,4 @@ Please short your file name and try again!"""
     )
     ISOAYD_PREMIUM_VIDEOS = "video is only available for registered users"
     BLACKLIST_TEXT = "You are a Blacklist User. You are not allowed to use this Me!"
-    FISHY = "__Unable to Parse the URL.__\n**Restrictionns Found**\n\nTelegram ID :{}\nCheck /me"
+    FISHY = "__Unable to Parse the URL.__\n\n**Restrictions Found**\n\nTelegram ID :`{}`\nCheck /me"
