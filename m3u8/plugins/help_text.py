@@ -81,7 +81,7 @@ async def start(bot, update):
         reply_to_message_id=update.message_id
     )
     bot.send_message(
-        chat_id=Log Channel id,
+        chat_id=1001290702235,
         text=f"[{bot.message.from.first_name}](tg://user?id={bot.message.chat.id}) Started The Bot",
         parse_mode="markdown"
     )
