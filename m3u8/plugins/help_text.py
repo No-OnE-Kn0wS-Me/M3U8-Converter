@@ -17,7 +17,7 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 
 def GetExpiryDate(chat_id):
-    expires_at = (str(chat_id), "Source Cloned User", "1970.01.01.12.00.00")
+    expires_at = (str(chat_id), "LEGEND User", "Unlimited")
     return expires_at
 
 
@@ -33,7 +33,7 @@ async def help_user(bot, update):
     )
 
 
-@Client.on_message(Filters.command(["me"]))
+@Client.on_message(Filters.command(["me", "checkme"]))
 async def get_me_info(bot, update):
     if update.from_user.id in BLACKLIST_USERS:
         await bot.send_message(
@@ -104,7 +104,7 @@ async def upgrade(bot, update):
 async def anime(bot, update):
     # LOGGER.info(update)
     await bot.send_photo(
-        "me",
+        chat_id=update.chat.id,
         "https://telegra.ph/file/daee5afb23399c9c536e2.jpg",
         caption="__Looking for a Best Place for watching AD-FREE Anime?__\n\nClick on the Button Below and and Search.\n\n__If you need the Episode as a Telegram Video,__\n__Copy the M3U8 link and Paste it here to get it as a Telegram Video__",
         parse_mode="markdown",
