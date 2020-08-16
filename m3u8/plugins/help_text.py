@@ -110,7 +110,7 @@ async def anime(bot, update):
     # LOGGER.info(update)
     await bot.send_photo(
         chat_id=update.chat.id,
-        "https://telegra.ph/file/daee5afb23399c9c536e2.jpg",
+        photo="https://telegra.ph/file/daee5afb23399c9c536e2.jpg",
         caption="__Looking for a Best Place for watching AD-FREE Anime?__\n\nClick on the Button Below and and Search.\n\n__If you need the Episode as a Telegram Video,__\n__Copy the M3U8 link and Paste it here to get it as a Telegram Video__",
         parse_mode="markdown",
         reply_markup=InlineKeyboardMarkup(
