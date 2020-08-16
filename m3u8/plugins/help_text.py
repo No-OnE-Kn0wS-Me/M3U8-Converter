@@ -45,18 +45,20 @@ async def get_me_info(bot, update):
         )
         return
     chat_id = str(update.from_user.id)
-    chat_id, plan_type, expires_at = GetExpiryDate(chat_id)
-    await bot.send_message(
-        chat_id=update.chat.id,
-        text=Translation.CURENT_PLAN_DETAILS.format(
-            chat_id,
-            plan_type,
-            expires_at
-        ),
-        parse_mode="html",
-        disable_web_page_preview=True,
-        reply_to_message_id=update.message_id
-    )
+        await bot.send_message(
+            chat_id=update.chat.id,
+            text="**You don't have any Restrictions Applied to your Account**\n Telegram ID : `{}`\n\n__If you Enjoyed this BOT, Kindly Donate__"
+            parse_mode="markdown",
+            reply_markup=InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton('Donate ❤️', url='https://www.patreon.com/WhySooSerious'),
+                    ]
+                ]
+            ),
+            reply_to_message_id=update.message_id,
+            disable_web_page_preview=True
+        )
 
 
 @Client.on_message(Filters.command(["start"]))
@@ -72,7 +74,7 @@ async def start(bot, update):
                     InlineKeyboardButton('Other BOTs', url='https://t.me/WhySooSerious/6')
                 ],
                 [
-                    InlineKeyboardButton('My Creator', url='https://t.me/WhySooSerious')
+                    InlineKeyboardButton('Report Bugs', url='https://t.me/WhySooSerious')
                 ]
             ]
         ),
@@ -86,7 +88,47 @@ async def upgrade(bot, update):
     await bot.send_message(
         chat_id=update.chat.id,
         text=Translation.UPGRADE_TEXT,
-        parse_mode="html",
+        parse_mode="markdown",
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton('Donate ❤️', url='https://www.patreon.com/WhySooSerious'),
+                ]
+            ]
+        ),
         reply_to_message_id=update.message_id,
         disable_web_page_preview=True
     )
+
+@Client.on_message(Filters.command(["anime"]))
+async def upgrade(bot, update):
+    # LOGGER.info(update)
+    await bot.send_photo(
+        "me",
+        "https://telegra.ph/file/daee5afb23399c9c536e2.jpg",
+        caption="__Looking for a Best Place for watching AD-FREE Anime?__\n\nClick on the Button Below and and Search.\n\n__If you need the Episode as a Telegram Video,__\n__Copy the M3U8 link and Paste it here to get it as a Telegram Video__",
+        parse_mode="markdown",
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton('Anime Stream BOT', url='https://t.me/Anime_Stream_BOT'),
+                ]
+            ]
+        ),
+        reply_to_message_id=update.message_id
+    )
+
+
+#    await bot.send_message(
+#        chat_id=update.chat.id,
+#        text="Looking for a Best Place for watching AD-FREE Anime?\n\nClick on the Button Below and and Search.\n\nIf you need the Episode as a Telegram Video,\nCopy the M3U8 link and Paste it here to get it as a Telegram Video",
+#        parse_mode="markdown",
+#        reply_markup=InlineKeyboardMarkup(
+#           [
+#                [
+#                    InlineKeyboardButton('Anime Stream BOT', url='https://t.me/Anime_Stream_BOT'),
+#                ]
+#            ]
+#        ),
+#        reply_to_message_id=update.message_id
+#    )
