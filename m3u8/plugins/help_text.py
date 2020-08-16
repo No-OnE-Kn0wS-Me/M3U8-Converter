@@ -39,15 +39,15 @@ async def get_me_info(bot, update):
         await bot.send_message(
             chat_id=update.chat.id,
             text=Translation.BLACKLIST_TEXT,
-            parse_mode="html",
+            parse_mode="markdown",
             reply_to_message_id=update.message_id,
             disable_web_page_preview=True
         )
-        return
-    chat_id = str(update.from_user.id)
+    
+    else:
         await bot.send_message(
             chat_id=update.chat.id,
-            text="**You don't have any Restrictions Applied to your Account**\n Telegram ID : `{}`\n\n__If you Enjoyed this BOT, Kindly Donate__"
+            text="**You don't have any Restrictions Applied to your Account**\n Telegram ID : `{}`\n\n__If you Enjoyed this BOT, Kindly Donate__",
             parse_mode="markdown",
             reply_markup=InlineKeyboardMarkup(
                 [
@@ -101,7 +101,7 @@ async def upgrade(bot, update):
     )
 
 @Client.on_message(Filters.command(["anime"]))
-async def upgrade(bot, update):
+async def anime(bot, update):
     # LOGGER.info(update)
     await bot.send_photo(
         "me",
