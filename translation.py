@@ -71,3 +71,5 @@ Please short your file name and try again!"""
         "and include its complete output."
     )
     ISOAYD_PREMIUM_VIDEOS = "video is only available for registered users"
+    BLACKLIST_TEXT = "You are a Blacklist User. You are not allowed to use this Me!"
+    FISHY = "__Unable to Parse the URL.__\n**Restrictionns Found** Check /me"

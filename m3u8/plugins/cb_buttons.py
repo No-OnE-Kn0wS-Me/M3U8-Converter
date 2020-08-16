@@ -3,10 +3,10 @@ from pyrogram import (
     Client,
     CallbackQuery
 )
-from m3u8 import AUTH_USERS
+from m3u8 import BLACKLIST_USERS
 from m3u8.plugins.youtube_dl_button import youtube_dl_call_back
 from m3u8.plugins.dl_button import ddl_call_back
-
+from translation import Translation
 
 logging.basicConfig(
     level=logging.DEBUG,
@@ -18,8 +18,15 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 @Client.on_callback_query()
 async def button(bot, update: CallbackQuery):
-    if update.from_user.id not in AUTH_USERS:
+    if update.from_user.id in BLACKLIST_USERS:
         await update.message.delete()
+        await bot.send_message(
+            chat_id=update.chat.id,
+            text=Translation.FISHY,
+            parse_mode="markdown",
+            reply_to_message_id=update.message_id,
+            disable_web_page_preview=True
+        )
         return
     # LOGGER.info(update)
     # NOTE: You should always answer,

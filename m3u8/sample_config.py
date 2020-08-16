@@ -32,3 +32,4 @@ class Config(object):
     # add config vars for the display progress
     FINISHED_PROGRESS_STR = os.environ.get("FINISHED_PROGRESS_STR", "█")
     UN_FINISHED_PROGRESS_STR = os.environ.get("UN_FINISHED_PROGRESS_STR", "░")
+    BLACKLIST_USERS = set(int(x) for x in os.environ.get("BLACKLIST_USERS", "").split())

@@ -8,6 +8,7 @@ from pyrogram import (
     Message
 )
 from m3u8 import (
+    BLACKLIST_USERS,
     AUTH_USERS,
     HTTP_PROXY,
     DOWNLOAD_LOCATION,
@@ -31,8 +32,15 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 @Client.on_message(Filters.regex(pattern=".*http.*"))
 async def echo(bot, update: Message):
-    if update.from_user.id not in AUTH_USERS:
+    if update.from_user.id in BLACKLIST_USERS:
         await update.delete()
+        await bot.send_message(
+            chat_id=update.chat.id,
+            text=Translation.FISHY,
+            parse_mode="markdown",
+            reply_to_message_id=update.message_id,
+            disable_web_page_preview=True
+        )
         return
     # LOGGER.info(update)
     # await bot.send_chat_action(

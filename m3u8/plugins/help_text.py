@@ -1,6 +1,6 @@
 import logging
 from translation import Translation
-
+from m3u8 import BLACKLIST_USERS
 from pyrogram import (
     Client,
     Filters,
@@ -35,7 +35,15 @@ async def help_user(bot, update):
 
 @Client.on_message(Filters.command(["me"]))
 async def get_me_info(bot, update):
-    # LOGGER.info(update)
+    if update.from_user.id in BLACKLIST_USERS:
+        await bot.send_message(
+            chat_id=update.chat.id,
+            text=Translation.BLACKLIST_TEXT,
+            parse_mode="html",
+            reply_to_message_id=update.message_id,
+            disable_web_page_preview=True
+        )
+        return
     chat_id = str(update.from_user.id)
     chat_id, plan_type, expires_at = GetExpiryDate(chat_id)
     await bot.send_message(
