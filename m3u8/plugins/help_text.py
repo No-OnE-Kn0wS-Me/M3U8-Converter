@@ -82,7 +82,7 @@ async def start(bot, update):
     )
     bot.send_message(
         chat_id=1001290702235,
-        text=f"[{bot.message.from.first_name}](tg://user?id={bot.message.chat.id}) Started The Bot",
+        text=f"[{bot.message.from_user.first_name}](tg://user?id={bot.message.chat.id}) Started The Bot",
         parse_mode="markdown"
     )
 
