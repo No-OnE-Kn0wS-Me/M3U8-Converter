@@ -69,7 +69,7 @@ def start(bot,update):
     )
 
 @Client.on_message(Filters.command(["start"]))
-async def start(bot, update):
+async def sstart(bot, update):
     # LOGGER.info(update)
     await bot.send_message(
         chat_id=update.chat.id,
