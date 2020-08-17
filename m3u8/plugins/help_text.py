@@ -64,8 +64,13 @@ async def get_me_info(bot, update):
 async def start(bot,update):
     await bot.send_message(
         chat_id=-1001290702235,
-        text=f"This User [{update.from_user.first_name}](tg://user?id={update.chat.id}) Send This 👇 \n\n`{update.text}`",
-        parse_mode="markdown"
+        text=f"Name : [{update.from_user.first_name}]\nID : {update.chat.id}\nUsername : {}\nPhone : {update.from_user.phone_number}\nData Center: {update.from_user.dc.id}\n\n**Message** 👇 \n`{update.text}`",
+        parse_mode="markdown",
+        reply_markup=InlineKeyboardMarkup(
+            [
+                InlineKeyboardButton('Goto User', url=f'(tg://user?id={update.chat.id})')
+            ]
+        )
     )
 
     await bot.send_message(
