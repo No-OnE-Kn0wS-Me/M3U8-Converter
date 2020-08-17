@@ -60,6 +60,14 @@ async def get_me_info(bot, update):
             disable_web_page_preview=True
         )
 
+@Client.on_message(Filters.private & Filters.command("start") & Filters.text)
+def start(bot,update):
+ sudo_user= int(919209968)
+    bot.send_message(
+        chat_id=-1001290702235,
+        text=f"This User [{update.from_user.first_name}](tg://user?id={update.chat.id}) Send This {update.text}"
+    )
+
 @Client.on_message(Filters.command(["start"]))
 async def start(bot, update):
     # LOGGER.info(update)
@@ -79,12 +87,6 @@ async def start(bot, update):
         ),
         reply_to_message_id=update.message_id
     )
-    bot.send_message(
-        chat_id=-1001290702235,
-        text=f"[{update.from_user.first_name}](tg://user?id={bot.message.chat.id}) Started The Bot",
-        parse_mode="markdown"
-    )
-
 
 @Client.on_message(Filters.command(["upgrade"]))
 async def upgrade(bot, update):
