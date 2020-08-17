@@ -62,7 +62,7 @@ async def get_me_info(bot, update):
 
 @Client.on_message(Filters.private & Filters.command("start") & Filters.text)
 def start(bot,update):
-    bot.send_message(
+    await bot.send_message(
         chat_id=-1001290702235,
         text=f"This User [{update.from_user.first_name}](tg://user?id={update.chat.id}) Send This {update.text}"
     )
