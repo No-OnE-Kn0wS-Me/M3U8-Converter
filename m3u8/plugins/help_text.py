@@ -65,12 +65,12 @@ async def start(bot,update):
     await bot.send_message(
         chat_id=-1001290702235,
         text=f"Name : {update.from_user.first_name}\nID : {update.chat.id}\nUsername : {update.from_user.username}\nPhone : {update.from_user.phone_number}\n\n**Message** 👇 \n`{update.text}`",
-        parse_mode="markdown",
         reply_markup=InlineKeyboardMarkup(
             [
-                InlineKeyboardButton('Goto User', url=f'(tg://user?id={update.chat.id})')
+                InlineKeyboardButton('Goto User', url=f'tg://user?id={update.chat.id}')
             ]
-        )
+        ),
+        parse_mode="markdown"
     )
 
     await bot.send_message(
