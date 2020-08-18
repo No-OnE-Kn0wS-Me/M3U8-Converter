@@ -201,8 +201,6 @@ async def echo(bot, update: Message):
             ])
         reply_markup = InlineKeyboardMarkup(inline_keyboard)
         # logger.info(reply_markup)
-        thumbnail = DEF_THUMB_NAIL_VID_S
-        thumbnail_image = DEF_THUMB_NAIL_VID_S
         if "thumbnail" in response_json:
             if response_json["thumbnail"] is not None:
                 thumbnail = response_json["thumbnail"]
