@@ -31,7 +31,7 @@ async def save_photo(bot, update):
         return
     # received single photo
     download_location = os.path.join(
-        DOWNLOAD_LOCATION,
+        DOWNLOAD_LOCATION + "/" +
         str(update.from_user.id) + ".jpg"
     )
     await bot.download_media(
