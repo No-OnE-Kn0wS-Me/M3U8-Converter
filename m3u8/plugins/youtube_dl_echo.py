@@ -207,16 +207,16 @@ async def echo(bot, update: Message):
             if response_json["thumbnail"] is not None:
                 thumbnail = response_json["thumbnail"]
                 thumbnail_image = response_json["thumbnail"]
-            thumb_image_path = DownLoadFile(
-                thumbnail_image,
-                DOWNLOAD_LOCATION + "/" +
-                str(update.from_user.id) + ".jpg",
-                CHUNK_SIZE,
-                None,  # bot,
-                Translation.DOWNLOAD_START,
-                update.message_id,
-                update.chat.id
-            )
+        thumb_image_path = DownLoadFile(
+            thumbnail_image,
+            DOWNLOAD_LOCATION + "/" +
+            str(update.from_user.id) + ".jpg",
+            CHUNK_SIZE,
+            None,  # bot,
+            Translation.DOWNLOAD_START,
+            update.message_id,
+            update.chat.id
+        )
         await bot.send_message(
             chat_id=update.chat.id,
             text=Translation.FORMAT_SELECTION.format(thumbnail) + "\n" + Translation.SET_CUSTOM_USERNAME_PASSWORD,
