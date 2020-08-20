@@ -11,9 +11,9 @@ import time
 
 # the secret configuration specific things
 if bool(os.environ.get("WEBHOOK", False)):
-    from sample_config import Config
+    from m3u8.sample_config import Config
 else:
-    from config import Config
+    from m3u8.config import Config
 
 # the Strings used for this "thing"
 from translation import Translation
