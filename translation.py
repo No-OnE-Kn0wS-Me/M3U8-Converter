@@ -3,7 +3,7 @@ class Translation:
     RENAME_403_ERR = "Sorry. You are not permitted to rename this file."
     ABS_TEXT = " Please don't be selfish."
     UPGRADE_TEXT = "You are Free to Use Me!"
-    FORMAT_SELECTION = "Select the desired format: File size might be approximate \nThe Conversion may take a While!"
+    FORMAT_SELECTION = "Select the desired format: File size might be approximate ({})\nThe Conversion may take a While!"
     SET_CUSTOM_USERNAME_PASSWORD = """If you want to download premium videos, provide in the following format:
 URL | filename | username | password"""
     NOYES_URL = "@robot URL detected. Please use https://shrtz.me/PtsVnf6 and get me a fast URL so that I can upload to Telegram, without me slowing down for other users."
